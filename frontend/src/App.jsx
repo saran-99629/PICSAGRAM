@@ -7,12 +7,14 @@ import Activationpage from "./pages/Activationpage/Activationpage";
 import Login from "./pages/Login/Login";
 import Passwordreset from "./pages/Passwordreset/Passwordreset";
 import Passwordresetconfirm from "./pages/Passwordresetconfirm/Passwordresetconfirm";
-
+import {Provider} from 'react-redux';
+import store from "./store";
 const App = () => {
   const history=createBrowserHistory();
   return (
     
       <div>
+        <Provider store={store}></Provider>
       <Router>
         <Switch>
           <Route exact path='/' component={Home} />
